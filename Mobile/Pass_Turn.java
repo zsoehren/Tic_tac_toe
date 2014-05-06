@@ -1,29 +1,24 @@
-import java.util.*;
+package com.example.tictactoe;
 import java.io.*;
-import java.awt.*;
-import java.net.*;
 
-public Get_Turn extends Thread{
+public class Pass_Turn extends Thread{
 	int Pos_x;
 	int Pos_y;
-	int Pos_z;
-	int Pos_h;
 	int finished;
 	
 	PrintWriter out;
 	BufferedReader in;
 	
 	
-	public void Get_Turn(PrintWriter going, BufferedReader reciever){
+	public Pass_Turn(PrintWriter going, BufferedReader reciever){
 		out = going;
 		in = reciever;
 	}
 	
 	public void run(){
+		System.out.println("We have entered the void, M'Lord");
 		out.println(Integer.toString(Pos_x));
 		out.println(Integer.toString(Pos_y));
-		out.println(Integer.toString(Pos_z));
-		out.println(Integer.toString(Pos_h));
 		finished = 1;
 	}
 	
