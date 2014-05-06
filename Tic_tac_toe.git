@@ -29,7 +29,7 @@
     <meta name="msapplication-TileImage" content="/windows-tile.png" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="selected-link" value="/zsoehren/Tic_tac_toe" data-pjax-transient />
-    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="800A1978:041F:82E05B4:536969B3" name="octolytics-dimension-request_id" />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="800A1978:2000:202C549:53696AAB" name="octolytics-dimension-request_id" />
     
 
     
@@ -37,7 +37,7 @@
     <link rel="icon" type="image/x-icon" href="https://github.global.ssl.fastly.net/favicon.ico" />
 
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="RgE8Kxp1zTPKp19bAooxUH3R3siKFtZZ5TRj2B8JbyWkzdIszUppCvLQbvdO7NRCqtLdr8FgzAIOycqcKTXL7Q==" name="csrf-token" />
+<meta content="GHNK8MU1eTQZBtw9q7YIMgs25pErgm5b9HcOqnmTSZTOP3sTFjA+FmMb/rjEWaek4U9Efn15GWBgnfcyF2ZrVg==" name="csrf-token" />
 
     <link href="https://github.global.ssl.fastly.net/assets/github-dd66c24faee93eaa771501154e779c24d1885a60.css" media="all" rel="stylesheet" type="text/css" />
     <link href="https://github.global.ssl.fastly.net/assets/github2-3a29d1685f5feec0c7700b885ac3f82369b9165c.css" media="all" rel="stylesheet" type="text/css" />
@@ -296,7 +296,7 @@
     </a>
 
     <ul class="site-footer-links">
-      <li>&copy; 2014 <span title="0.07424s from github-fe134-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+      <li>&copy; 2014 <span title="0.03132s from github-fe120-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
         <li><a href="/site/terms">Terms</a></li>
         <li><a href="/site/privacy">Privacy</a></li>
         <li><a href="/security">Security</a></li>
