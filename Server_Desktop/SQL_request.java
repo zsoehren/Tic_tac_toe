@@ -7,14 +7,20 @@ import java.io.*;
 import java.util.*;
 
 
-///////////////////////////// Mutlithreaded Server /////////////////////////////
+///////////////////////////// Server /////////////////////////////
 
 /**
    This class handles the client input for one server socket connection. 
 */
+
 class SQL_request implements Runnable
 { 
 	int valid = 0;
+	int portnumber = 5433;
+	Socket client;
+	PrintWriter out;
+	BufferedReader in;
+	
 	String command;
 	String name;
 	String pass;
@@ -56,10 +62,15 @@ class SQL_request implements Runnable
 	//System.out.println(args[1]);
 	while(result.next()) {
 		if(pass.equals(result.getString(2))){
-			valid=1;
+  		  try{
+			  out.println("1");
+		  }catch(Exception e){
+		  }
 		}else{
-			valid=0;
-			
+  		  try{
+			  out.println("0");
+		  }catch(Exception e){
+		  }
 		}
 		result.close();
 		return;
@@ -91,7 +102,10 @@ class SQL_request implements Runnable
 
     	  //System.out.println(args[1]);
     	  while(result.next()) {
-    		  valid=0;
+    		  try{
+    			  out.println("0");
+    		  }catch(Exception e){
+    		  }
     		  result.close();
     		  return;
     	  }
@@ -129,9 +143,28 @@ class SQL_request implements Runnable
    }
 
    public void run() {  
+	   try{
+		   ServerSocket serverSocket = new ServerSocket(portnumber);
+		   client = serverSocket.accept();
+		   out = new PrintWriter(client.getOutputStream(), true);
+		   in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+    	   command = in.readLine();
+    	   name = in.readLine();
+    	   pass = in.readLine();
+       }catch(Exception e){
+       }
 	   handleRequest();
+	   try{
+		   out.close();
+		   in.close();
+		   client.close();
+	   }catch(Exception e){
+	   }
    }
-
-   private Socket incoming;
-}
+   
+   public static void main(String args[]){
+	   new SQL_request().run();
+	   return;
+   }
+ }
 
